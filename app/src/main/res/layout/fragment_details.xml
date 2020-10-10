@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DetailsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <data>
+
+        <variable
+            name="dogBreed"
+            type="com.example.dogsapp.model.DogBreed" />
+        <variable
+            name="imageUrl"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:avatar="@{imageUrl}"></ImageView>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{dogBreed.name}"></TextView>
+
+        <TextView
+            android:id="@+id/tv_life_span"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{dogBreed.lifeSpan}"></TextView>
+
+        <TextView
+            android:id="@+id/tv_origin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{dogBreed.origin}"></TextView>
+
+    </LinearLayout>
+
+</layout>
